@@ -22,7 +22,18 @@
 The USB Dual-Voltage Power Supply is a compact power supply project designed to provide either 3.3V or 5V DC output from a USB power source.
 
 ## Components
-
+|Ref.|	Component	| Specification |	Footprint|
+|--|-----|-----|-----|
+|J1	USB-C receptacle	USB 2.0, 16 contacts, right-angle connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12
+|R1, R2|	CC resistors	5.1 kΩ, 1%, 0.125 W	Resistor_SMD:R_0805_2012Metric
+|F1|	Resettable PTC fuse	0.5 A hold current, ≥6 V rating, provisional	Fuse:Fuse_1206_3216Metric
+|U1|	3.3 V regulator	AP2112K-3.3	Package_TO_SOT_SMD:SOT-23-5
+|C1|	Input capacitor	1 µF, 16 V, X7R ceramic	Capacitor_SMD:C_0805_2012Metric
+|C2|	Output capacitor	1 µF, 16 V, X7R ceramic	Capacitor_SMD:C_0805_2012Metric
+|C3|	Additional input capacitor	10 µF, 16 V, X7R ceramic	Capacitor_SMD:C_1206_3216Metric
+|R3|	LED current-limiting resistor	1 kΩ, 0.125 W	Resistor_SMD:R_0805_2012Metric
+|D1|	Power indicator	Green LED, approximately 2–3 V forward voltage	LED_SMD:LED_0805_2012Metric
+|J2|	Male output header	1×3, 2.54 mm pitch, vertical	Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical
 
 
 ## Design Approach
