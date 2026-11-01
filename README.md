@@ -65,20 +65,26 @@ The front copper layer accommodates the main component connections and power rou
 
 ### Case Design
 
-| Parameter | Inches | Millimetres (mm) |
-|---|---:|---:|
-| **Full Case** | | |
-| Length | 2.2 | 55.88 |
-| Breadth | 1.0 | 25.40 |
-| Height | 0.4 | 10.16 |
-| **USB-C Outlet** | | |
-| Length | 0.525 | 13.34 |
-| Breadth | 0.300 | 7.62 |
-| **Individual Case Half** | | |
-| Length | 2.2 | 55.88 |
-| Breadth | 1.0 | 25.40 |
-| Height | 0.2 | 5.08 |
-| **Design Software** | Autodesk Fusion 360 | |
+
+**Design Software:** Autodesk Fusion 360
+
+| **Full Case** | Value (mm) |
+|---|---:|
+| Length | 55.88 |
+| Breadth | 25.40 |
+| Height | 10.16 |
+
+| **USB-C Outlet** | Value (mm) |
+|---|---:|
+| Length | 13.34 |
+| Breadth | 7.62 |
+
+| **Individual Case Half** | Value (mm) |
+|---|---:|
+| Length | 55.88 |
+| Breadth | 25.40 |
+| Height | 5.08 |
+
 
 ## How It Works
 The board receives a 5V DC supply through its USB-C receptacle. Two 5.1 kΩ pull-down resistors connected to the CC pins establish the USB-C sink configuration, allowing the power source to recognise the board as a power-consuming device and supply power.
