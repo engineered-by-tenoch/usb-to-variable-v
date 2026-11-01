@@ -39,9 +39,21 @@ The USB Dual-Voltage Power Supply is a compact power supply project designed to 
 ## Design Approach
 The PCB has a power input, voltage regulation circuitry and a three-pin output connector. The first pin supplies 3.3V, the second is the ground pin and the third is 5V. The project also incorporates a custom-designed enclosure to house and protect the PCB assembly.
 
-  
-## How It Works
+### PCB Design
+The PCB was designed in KiCad as a two-layer FR-4 board, measuring 48 × 16.5 mm with a thickness of 1.6 mm. It incorporates a USB-C power input, a resettable fuse for input protection, an AP2112K-3.3 voltage regulator, filtering capacitors and a power indicator LED. A three-pin header provides access to the 5 V and 3.3 V outputs, alongside a common ground connection.
 
+The front copper layer accommodates the main component connections and power routing, while the back copper layer is primarily used as a ground plane. The board has a minimum track width of 0.20 mm, a minimum clearance of 0.21 mm and a minimum drill diameter of 0.30 mm.
+
+### Case Design
+
+## How It Works
+The board receives a 5V DC supply through its USB-C receptacle. Two 5.1 kΩ pull-down resistors connected to the CC pins establish the USB-C sink configuration, allowing the power source to recognise the board as a power-consuming device and supply power.
+
+The incoming supply passes through a resettable polyfuse, which provides overcurrent protection by increasing its resistance when excessive current causes it to heat up. An LED, connected through a current-limiting resistor, provides a visual indication that the board is powered.
+
+The circuit provides two voltage outputs: 5V and 3.3V. The 5V output is supplied directly from the USB input through the polyfuse, while the AP2112K-3.3 low-dropout (LDO) regulator converts the incoming 5V supply to a regulated 3.3V output. This provides two selectable voltage levels for powering external devices.
+
+Capacitors are incorporated into the circuit to support stable power delivery. They provide local charge storage, help suppress supply fluctuations and reduce electrical noise. The 1 µF, 16V capacitor is part of the regulator's supporting circuitry, helping maintain stable operation.
 
 
 
@@ -65,4 +77,16 @@ The PCB has a power input, voltage regulation circuitry and a three-pin output c
 
 
 ## Key Takeaways
+- The arrangement of components and copper tracks determines how electrical connections are distributed across a PCB, making component placement an important part of the design process.
 
+- Copper zones provide a shared connection between components on the same electrical net, reducing the need for individually routed ground connections.
+
+- Vias establish electrical connections between copper layers, allowing tracks to change layers and providing flexibility when routing a two-layer PCB.
+
+- Decoupling capacitors help maintain stable supply voltages by responding to transient current demands and reducing electrical noise.
+
+- Component footprints determine the physical arrangement of solder pads and must correspond to the dimensions and pin configurations of the selected components.
+
+- PCB dimensions, component heights and connector positions must be considered together when designing an enclosure to ensure proper fit and accessibility.
+
+- Creating a specific layer specifically for the ground connection is effective for simplifying copper traces on the board.
