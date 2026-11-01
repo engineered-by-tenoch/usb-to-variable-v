@@ -19,7 +19,7 @@
 
 
 ## Overview
-The USB Dual-Voltage Power Supply is a compact power supply project designed to provide either 3.3V or 5V DC output from a USB power source.
+The USB Dual-Voltage Power Supply is a compact power supply project designed to provide either 3.3V or 5V DC output from a USB power source designed in KiCAD. The casing was modelled in Fusion 360.
 
 ## Components
 |Ref.|	Component	| Specification |	Footprint|
@@ -42,9 +42,47 @@ The PCB has a power input, voltage regulation circuitry and a three-pin output c
 ### PCB Design
 The PCB was designed in KiCad as a two-layer FR-4 board, measuring 48 × 16.5 mm with a thickness of 1.6 mm. It incorporates a USB-C power input, a resettable fuse for input protection, an AP2112K-3.3 voltage regulator, filtering capacitors and a power indicator LED. A three-pin header provides access to the 5 V and 3.3 V outputs, alongside a common ground connection.
 
+| Parameter | Value (mm)|
+|---|---|
+| PCB Design Software | KiCad |
+| Board Type | Two-layer FR-4 |
+| Board Dimensions | 48 × 16.5 mm |
+| Board Area | 792.4 mm² |
+| Board Thickness | 1.6 mm |
+| Minimum Track Width | 0.20 mm |
+| Minimum Track Clearance | 0.21 mm |
+| Minimum Drill Diameter | 0.30 mm |
+| Front Copper Area | 129.0 mm² |
+| Back Copper Area | 706.1 mm² |
+| Front Footprint Area | 333.8 mm² |
+| Back Footprint Area | 33.7 mm² |
+| Front Footprint Density | 42.19% |
+| Back Footprint Density | 4.26% |
+
 The front copper layer accommodates the main component connections and power routing, while the back copper layer is primarily used as a ground plane. The board has a minimum track width of 0.20 mm, a minimum clearance of 0.21 mm and a minimum drill diameter of 0.30 mm.
 
 ### Case Design
+USB receptacle outlet Dimensions: 0.3x0.525 (on either side)
+
+Full case Dimensions: 1x2.2x0.4
+
+in inches, convert to mm?
+bxlxh
+
+each case has the same dimensions but half the thickness-md table for this about the case design, any little note what mentioning? is it not all conveyed in the table?
+
+| Parameter | Value (inches)|
+|---|---|
+|Full Case|
+|---|
+|Length|2.2|
+|Breadth|1.0|
+|Height|0.4|
+|---|
+|Outlet|
+|---|
+|Length|0.525|
+|Breadth|0.300|
 
 ## How It Works
 The board receives a 5V DC supply through its USB-C receptacle. Two 5.1 kΩ pull-down resistors connected to the CC pins establish the USB-C sink configuration, allowing the power source to recognise the board as a power-consuming device and supply power.
