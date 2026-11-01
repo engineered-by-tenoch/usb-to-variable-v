@@ -61,28 +61,24 @@ The PCB was designed in KiCad as a two-layer FR-4 board, measuring 48 × 16.5 mm
 
 The front copper layer accommodates the main component connections and power routing, while the back copper layer is primarily used as a ground plane. The board has a minimum track width of 0.20 mm, a minimum clearance of 0.21 mm and a minimum drill diameter of 0.30 mm.
 
+
+
 ### Case Design
-USB receptacle outlet Dimensions: 0.3x0.525 (on either side)
 
-Full case Dimensions: 1x2.2x0.4
-
-in inches, convert to mm?
-bxlxh
-
-each case has the same dimensions but half the thickness-md table for this about the case design, any little note what mentioning? is it not all conveyed in the table?
-
-| Parameter | Value (inches)|
-|---|---|
-|Full Case|
-|---|
-|Length|2.2|
-|Breadth|1.0|
-|Height|0.4|
-|---|
-|Outlet|
-|---|
-|Length|0.525|
-|Breadth|0.300|
+| Parameter | Inches | Millimetres (mm) |
+|---|---:|---:|
+| **Full Case** | | |
+| Length | 2.2 | 55.88 |
+| Breadth | 1.0 | 25.40 |
+| Height | 0.4 | 10.16 |
+| **USB-C Outlet** | | |
+| Length | 0.525 | 13.34 |
+| Breadth | 0.300 | 7.62 |
+| **Individual Case Half** | | |
+| Length | 2.2 | 55.88 |
+| Breadth | 1.0 | 25.40 |
+| Height | 0.2 | 5.08 |
+| **Design Software** | Autodesk Fusion 360 | |
 
 ## How It Works
 The board receives a 5V DC supply through its USB-C receptacle. Two 5.1 kΩ pull-down resistors connected to the CC pins establish the USB-C sink configuration, allowing the power source to recognise the board as a power-consuming device and supply power.
